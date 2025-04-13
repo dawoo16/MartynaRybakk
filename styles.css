@@ -528,6 +528,21 @@ body {
 
 @media (max-width: 768px) {
     .hero .container {
+        grid-template-columns: 1fr; /* Stack text and image vertically */
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 1; /* Ensure text appears first */
+    }
+
+    .trainer-image {
+        order: 2; /* Ensure image appears below text */
+        max-width: 200px; /* Reduce image size */
+        margin: 20px auto; /* Center image with spacing */
+    }
+
+    .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -578,14 +593,39 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Add padding to prevent text from touching screen edges */
+    }
+
+    h1, h2, h3 {
+        word-wrap: break-word; /* Ensure long words break to fit the screen */
+        font-size: calc(1.5rem + 1vw); /* Adjust font size dynamically for smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Reduce paragraph font size for better readability */
+        line-height: 1.5; /* Improve spacing between lines */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Adjust navigation link font size */
+    }
+
+    .footer-section h3 {
+        font-size: 18px; /* Reduce footer heading size */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Adjust footer list item font size */
+    }
+}
+
 /* Mobile Menu Styles */
 .mobile-menu-button {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: var(--secondary-color);
-    cursor: pointer;
+    font-size: 18px; /* Reduced font size for smaller toggle button */
+    padding: 5px 10px; /* Adjusted padding for better proportions */
+    width: auto; /* Ensure the button is not too wide */
 }
 
 @media (max-width: 768px) {
