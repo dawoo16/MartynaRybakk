@@ -558,6 +558,24 @@ body {
     .cta-buttons {
         justify-content: center;
     }
+
+    .about-content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically on mobile */
+        align-items: center;
+        text-align: center; /* Center-align text for better readability */
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    .about-image {
+        order: -1; /* Move image above text */
+        width: 100%; /* Ensure image takes full width */
+        max-width: 300px; /* Limit maximum width */
+    }
+
+    .about-text {
+        padding: 0 20px; /* Add padding for better spacing */
+    }
 }
 
 /* Mobile Menu Styles */
