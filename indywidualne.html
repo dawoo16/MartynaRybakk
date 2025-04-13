@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Współprace Indywidualne</title>
+    <link rel="stylesheet" href="indywidualne.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="IMG_0953.jpeg" alt="Logo Trenera Personalnego">
+                <span>Martyna Rybak</span>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-button" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Off-canvas sliding menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" onclick="toggleMenu()">O mnie</a></li>
+            <li><a href="#programs" onclick="toggleMenu()">Programy</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Opinie</a></li>
+            <li><a href="products.html" onclick="toggleMenu()">E-Learning</a></li>
+            <li><a href="#contact" class="cta-button" onclick="toggleMenu()">Rozpocznij swoją podróż</a></li>
+        </ul>
+    </div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Współprace Indywidualne</h1>
+                <p>Odkryj nasze spersonalizowane usługi, które pomogą Ci osiągnąć Twoje cele fitness.</p>
+            </div>
+            <div class="products-grid">
+                <div class="gold-card">
+                    <img src="IMG_0953.jpeg" alt="Plan Treningowy" class="gold-card-image">
+                    <h3 class="gold-card-title">Plan Treningowy Indywidualny</h3>
+                    <p class="gold-card-price">Cena: 199 PLN</p>
+                    <button class="gold-card-button">Kup Teraz</button>
+                </div>
+                <div class="gold-card">
+                    <img src="adjusted_gold_prowadzenie_online.png" alt="Prowadzenie Online" class="gold-card-image">
+                    <h3 class="gold-card-title">Prowadzenie Online</h3>
+                    <p class="gold-card-price">Cena: 299 PLN</p>
+                    <button class="gold-card-button">Kup Teraz</button>
+                </div>
+                <div class="gold-card">
+                    <img src="adjusted_gold_gotowe_plany_treningowe.png" alt="Gotowe Plany Treningowe" class="gold-card-image">
+                    <h3 class="gold-card-title">Gotowe Plany Treningowe</h3>
+                    <p class="gold-card-price">Cena: 99 PLN</p>
+                    <button class="gold-card-button">Kup Teraz</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Martyna Rybak</h3>
+                    <p>Certyfikowany Trener Personalny<br>Pomagam osiągnąć Twoje cele fitness</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Szybkie Linki</h3>
+                    <ul>
+                        <li><a href="index.html">Strona Główna</a></li>
+                        <li><a href="#products">Produkty</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Obserwuj mnie</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Martyna Rybak. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
