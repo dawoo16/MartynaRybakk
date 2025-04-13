@@ -298,3 +298,48 @@ body {
 .hero-content {
   animation: fadeIn 2.5s ease-out;
 }
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Reduce font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+    gap: 20px; /* Reduce gap between cards */
+  }
+
+  .gold-card {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .gold-card img {
+    width: 60px; /* Reduce image size */
+    height: 60px;
+  }
+
+  .navbar .container {
+    flex-direction: column; /* Stack logo and nav links */
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 10px; /* Reduce gap between links */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack footer sections vertically */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+}
