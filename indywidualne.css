@@ -1,0 +1,342 @@
+/* Base styles for indywidualne.html updated to match styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between; /* Keep logo on the left and navbar links on the right */
+  align-items: center;
+  height: 80px;
+}
+
+/* Ensure the header and body are seamlessly connected */
+.hero {
+  background: beige; /* Changed background color to beige */
+  color: black;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0; /* Remove the gap between header and body */
+  padding: 160px 0 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.products {
+  padding: 0 20px; /* Ensure products start immediately after the header */
+  background: beige; /* Changed background color to beige */
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1E1E1E;
+}
+
+/* Adjust the layout to allow a maximum of 2 cards per row */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Maximum 2 cards per row */
+  gap: 30px; /* Maintain spacing between cards */
+  justify-content: center;
+}
+
+.gold-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.gold-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.gold-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.gold-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #B8860B;
+}
+
+.gold-card p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.gold-card button {
+  background-color: #B8860B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gold-card button:hover {
+  background-color: #DAA520;
+}
+
+.footer {
+  background: #1E1E1E;
+  color: white;
+  padding: 80px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #FFD700;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  background: #FFD700;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-button {
+  font-size: 18px; /* Reduced font size for smaller toggle button */
+  padding: 5px 10px; /* Adjusted padding for better proportions */
+  width: auto; /* Ensure the button is not too wide */
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+}
+
+/* Ensure the toggle button is visible on PC */
+@media (min-width: 1024px) {
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #FFF8DC; /* Updated background color to a lighter gold shade */
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: right 0.3s ease;
+    z-index: 2000;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu .close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu ul a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeIn 2.5s ease-out;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Reduce font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust paragraph font size */
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+    gap: 20px; /* Reduce gap between cards */
+  }
+
+  .gold-card {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .gold-card img {
+    width: 60px; /* Reduce image size */
+    height: 60px;
+  }
+
+  .navbar .container {
+    flex-direction: column; /* Stack logo and nav links */
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    gap: 10px; /* Reduce gap between links */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack footer sections vertically */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+}
