@@ -194,12 +194,9 @@ body {
 
 /* Mobile Menu Styles */
 .mobile-menu-button {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: var(--secondary-color);
-    cursor: pointer;
+  font-size: 18px; /* Reduced font size for smaller toggle button */
+  padding: 5px 10px; /* Adjusted padding for better proportions */
+  width: auto; /* Ensure the button is not too wide */
 }
 
 @media (max-width: 768px) {
