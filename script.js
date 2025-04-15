@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Special options for about section
     const aboutObserverOptions = {
-        threshold: 0.3,
-        rootMargin: '-180px 0px -50px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Adjusted rootMargin for better mobile support
     };
 
     const animatedSections = document.querySelectorAll('.programs, .testimonials, .contact');
@@ -68,6 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedSections.forEach(section => sectionObserver.observe(section));
     if (aboutSection) {
         aboutObserver.observe(aboutSection);
+
+        // FIX: Force visible if already in viewport on load (especially mobile)
+        if (aboutSection.getBoundingClientRect().top < window.innerHeight) {
+            aboutSection.classList.add('visible');
+        }
     }
     animatedContent.forEach(content => contentObserver.observe(content));
     animatedCards.forEach(card => cardObserver.observe(card));
