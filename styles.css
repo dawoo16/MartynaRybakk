@@ -691,6 +691,25 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 18px; /* Shrink text size on small screens */
+    }
+
+    .logo img {
+        max-height: 40px; /* Shrink logo image size */
+    }
+
+    .navbar .container {
+        padding: 0 10px; /* Reduce padding for smaller viewports */
+    }
+
+    .about {
+        opacity: 1; /* Ensure visibility on mobile */
+        transform: translateY(0); /* Reset transform */
+    }
+}
+
 /* Mobile Menu Styles */
 .mobile-menu-button {
     display: block;
