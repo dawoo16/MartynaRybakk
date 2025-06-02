@@ -691,25 +691,6 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .logo span {
-        font-size: 18px; /* Shrink text size on small screens */
-    }
-
-    .logo img {
-        max-height: 40px; /* Shrink logo image size */
-    }
-
-    .navbar .container {
-        padding: 0 10px; /* Reduce padding for smaller viewports */
-    }
-
-    .about {
-        opacity: 1; /* Ensure visibility on mobile */
-        transform: translateY(0); /* Reset transform */
-    }
-}
-
 /* Mobile Menu Styles */
 .mobile-menu-button {
     display: block;
@@ -803,8 +784,7 @@ body {
 
 /* Styling for the quiz container */
 .quiz {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -864,6 +844,66 @@ body {
 
 #quiz-form button:hover {
     background-color: #0056b3;
+}
+
+/* Styling for the quiz steps */
+.quiz-step {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: beige;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#quiz-result {
+    display: none; /* Hide it completely */
+}
+
+/* Styling for the quiz results */
+.quiz-result {
+    display: none; /* Hide results initially */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-result.show {
+    display: block; /* Show results when ready */
+}
+
+.quiz-result h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.quiz-result .answer {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-result .answer:hover {
+    background-color: #f0f0f0;
+}
+
+.quiz-result .score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* Animation Keyframes */
