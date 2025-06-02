@@ -219,6 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('open');
         }
     });
+
+    document.getElementById("next-button").addEventListener("click", function () {
+        document.getElementById("step-1").style.display = "none";
+        document.getElementById("step-2").style.display = "block";
+    });
+
+    document.getElementById("back-button").addEventListener("click", function () {
+        document.getElementById("step-2").style.display = "none";
+        document.getElementById("step-1").style.display = "block";
+    });
+    
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {
