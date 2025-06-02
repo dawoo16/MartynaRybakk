@@ -25,10 +25,11 @@
     <div class="mobile-menu" id="mobileMenu">
         <ul>
             <li><a href="#about" onclick="toggleMenu()">O mnie</a></li>
-            <li><a href="indywidualne.html" onclick="toggleMenu()">Sklep</a></li>
             <li><a href="#programs" onclick="toggleMenu()">Programy</a></li>
             <li><a href="#testimonials" onclick="toggleMenu()">Opinie</a></li>
-            <li><a href="#contact" class="cta-button" onclick="toggleMenu()">Rozpocznij swoją podróż</a></li>
+            <li><a href="indywidualne.html" onclick="toggleMenu()">Usługi treningowe</a></li>
+            <li><a href="jadlospisy.html" onclick="toggleMenu()">Dieta - Jadłospisy</a></li>
+            <li><a href="#quiz" class="cta-button" onclick="toggleMenu()">Rozpocznij swoją podróż</a></li>
         </ul>
     </div>
 
@@ -84,11 +85,11 @@
                                 <p class="highlight">Certyfikowany Trener Personalny z długoletnim doświadczeniem w zmienianiu życia</p>
                                 <p>Cześć! Mam na imię Martyna i jestem trenerem personalnym oraz medycznym. Sport towarzyszy mi od dziecka – trenowałam lekkoatletykę i siatkówkę, ale moja droga do zdrowej sylwetki nie była prosta. Przeszłam przez nadwagę, niedowagę i zaburzenia odżywiania. Właśnie wtedy odkryłam siłownię – miejsce, które zmieniło moje życie.
 
-Zaczynałam zupełnie sama, bez planu i wsparcia, dlatego wiem, jak zagubione można się czuć na początku. Dziś pomagam innym przejść tę drogę z większą pewnością i spokojem – krok po kroku, bez presji.
-
-Brzmi znajomo? Może właśnie Ty potrzebujesz kogoś, kto nie tylko pokaże Ci, co robić, ale przede wszystkim – będzie obok i wesprze wtedy, kiedy trzeba.
-
-Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w zdrowy sposób – odezwij się. Pogadamy, zobaczymy, co możemy razem zrobić.</p>
+                                    Zaczynałam zupełnie sama, bez planu i wsparcia, dlatego wiem, jak zagubione można się czuć na początku. Dziś pomagam innym przejść tę drogę z większą pewnością i spokojem – krok po kroku, bez presji.
+                                    
+                                    Brzmi znajomo? Może właśnie Ty potrzebujesz kogoś, kto nie tylko pokaże Ci, co robić, ale przede wszystkim – będzie obok i wesprze wtedy, kiedy trzeba.
+                                    
+                                    Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w zdrowy sposób – odezwij się. Pogadamy, zobaczymy, co możemy razem zrobić.</p>
                             </div>
                             <div class="about-image">
                                 <img src="IMG_0954.jpeg" alt="Sesja Treningowa">
@@ -107,15 +108,15 @@ Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w
                         <div class="programs-grid">
                             <div class="program-card">
                                 <i class="fas fa-laptop"></i>
-                                <h3>Współpraca treningowa</h3>
-                                <p>Zdalne treningi oraaz odpowiednie gotowe treningi i wsparcie dla tych, którzy wolą ćwiczyć w domu jak i na silowni.</p>
+                                <h3>Współprace Indywidualne</h3>
+                                <p>Zdalne treningi i wsparcie dla tych, którzy wolą ćwiczyć w domu.</p>
                                 <a href="indywidualne.html" class="program-link">Dowiedz się więcej →</a>
                             </div>
                             <div class="program-card">
                                 <i class="fas fa-apple-alt"></i>
                                 <h3>Planowanie Żywienia</h3>
                                 <p>Indywidualne plany posiłków i porady żywieniowe, aby zmaksymalizować Twoje wyniki fitness.</p>
-                                <a href="indywidualne.html" class="program-link">Dowiedz się więcej →</a>
+                                <a href="jadlospisy.html" class="program-link">Dowiedz się więcej →</a>
                             </div>
                         </div>
                     </div>
@@ -123,49 +124,56 @@ Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w
             </div>
         </div>
 
-        <section class="quiz">
+        <section id="quiz" class="quiz">
             <div class="container">
                 <h2>Znajdź swój idealny program treningowy</h2>
                 <p>Odpowiedz na kilka pytań, aby otrzymać spersonalizowane rekomendacje!</p>
                 <form id="quiz-form">
-                    <div class="quiz-question">
-                        <h3>1. Jaka jest Twoja waga (w kg)?</h3>
-                        <input type="number" id="weight" name="weight" required>
+                    <div id="step-1" class="quiz-step">
+                        <div class="quiz-question">
+                            <h3>1. Jaka jest Twoja waga (w kg)?</h3>
+                            <input type="number" id="weight" name="weight" required>
+                        </div>
+                        <div class="quiz-question">
+                            <h3>2. Jaki jest Twój wzrost (w cm)?</h3>
+                            <input type="number" id="height" name="height" required>
+                        </div>
+                        <div class="quiz-question">
+                            <h3>3. Czy jesteś kobietą czy mężczyzną?</h3>
+                            <label><input type="radio" name="gender" value="woman" required> Kobieta</label><br>
+                            <label><input type="radio" name="gender" value="man" required> Mężczyzna</label>
+                        </div>
+                        <div class="quiz-question">
+                            <h3>4. Jaki jest Twój wiek?</h3>
+                            <input type="number" id="age" name="age" required>
+                        </div>
+                        <button type="button" id="next-button">Dalej</button>
                     </div>
-                    <div class="quiz-question">
-                        <h3>2. Jaki jest Twój wzrost (w cm)?</h3>
-                        <input type="number" id="height" name="height" required>
+
+                    <div id="step-2" class="quiz-step" style="display:none;">
+                        <div class="quiz-question">
+                            <h3>5. Jaki jest Twój główny cel fitness?</h3>
+                            <label><input type="radio" name="goal" value="strength"> Budowa siły</label><br>
+                            <label><input type="radio" name="goal" value="weight-loss"> Utrata wagi</label><br>
+                            <label><input type="radio" name="goal" value="endurance"> Poprawa wytrzymałości</label>
+                        </div>
+                        <div class="quiz-question">
+                            <h3>6. Ile dni w tygodniu możesz poświęcić na trening?</h3>
+                            <label><input type="radio" name="frequency" value="3"> 1-3 dni</label><br>
+                            <label><input type="radio" name="frequency" value="5"> 4-5 dni</label><br>
+                            <label><input type="radio" name="frequency" value="7"> 6-7 dni</label>
+                        </div>
+                        <div class="quiz-question">
+                            <h3>7. Jaki rodzaj treningu preferujesz?</h3>
+                            <label><input type="radio" name="type" value="weights"> Trening siłowy</label><br>
+                            <label><input type="radio" name="type" value="cardio"> Cardio</label><br>
+                            <label><input type="radio" name="type" value="mixed"> Mieszany (siłowy + cardio)</label>
+                        </div>
+                        <button type="button" id="back-button">Powrót</button>
+                        <button type="button" onclick="analyzeQuiz()">Znajdź mój program</button>
                     </div>
-                    <div class="quiz-question">
-                        <h3>3. Czy jesteś kobietą czy mężczyzną?</h3>
-                        <label><input type="radio" name="gender" value="woman" required> Kobieta</label><br>
-                        <label><input type="radio" name="gender" value="man" required> Mężczyzna</label>
-                    </div>
-                    <div class="quiz-question">
-                        <h3>4. Jaki jest Twój wiek?</h3>
-                        <input type="number" id="age" name="age" required>
-                    </div>
-                    <div class="quiz-question">
-                        <h3>5. Jaki jest Twój główny cel fitness?</h3>
-                        <label><input type="radio" name="goal" value="strength"> Budowa siły</label><br>
-                        <label><input type="radio" name="goal" value="weight-loss"> Utrata wagi</label><br>
-                        <label><input type="radio" name="goal" value="endurance"> Poprawa wytrzymałości</label>
-                    </div>
-                    <div class="quiz-question">
-                        <h3>6. Ile dni w tygodniu możesz poświęcić na trening?</h3>
-                        <label><input type="radio" name="frequency" value="3"> 1-3 dni</label><br>
-                        <label><input type="radio" name="frequency" value="5"> 4-5 dni</label><br>
-                        <label><input type="radio" name="frequency" value="7"> 6-7 dni</label>
-                    </div>
-                    <div class="quiz-question">
-                        <h3>7. Jaki rodzaj treningu preferujesz?</h3>
-                        <label><input type="radio" name="type" value="weights"> Trening siłowy</label><br>
-                        <label><input type="radio" name="type" value="cardio"> Cardio</label><br>
-                        <label><input type="radio" name="type" value="mixed"> Mieszany (siłowy + cardio)</label>
-                    </div>
-                    <button type="button" onclick="analyzeQuiz()">Znajdź mój program</button>
                 </form>
-                <div id="quiz-result" class="quiz-result"></div>
+                <div id="quiz-result" class="quiz-result quiz-step"></div>
             </div>
         </section>
 
@@ -231,10 +239,8 @@ Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w
                                     <div><i class="fas fa-map-marker-alt"></i> Wrocław Samurai Gym</div>
                                 </div>
                                 <div class="social-links">
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                                    <a href="https://www.instagram.com/martynarybak/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.tiktok.com/@rybak.martyna"><i class="fab fa-tiktok"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -263,10 +269,10 @@ Jeśli chcesz poczuć się lepiej w swoim ciele, zbudować formę i zrobić to w
                 <div class="footer-section">
                     <h3>Obserwuj mnie</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/martynarybak/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@rybak.martyna"><i class="fab fa-tiktok"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
